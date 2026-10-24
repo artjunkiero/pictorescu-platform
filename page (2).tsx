@@ -1,0 +1,1 @@
+import LoginForm from './LoginForm';export default function Login(){return <div className="container-main max-w-lg py-20"><p className="eyebrow">Acces privat</p><h1 className="font-serif text-4xl mt-3 mb-8">Administrare PICTORESCU</h1><LoginForm/></div>}

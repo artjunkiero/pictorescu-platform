@@ -1,0 +1,2 @@
+import {getDb} from './mongodb';
+export async function adminCounts(){const db=await getDb();const [artists,artworks,published]=await Promise.all([db.collection('artist_profiles').countDocuments({status:'pending'}),db.collection('artworks').countDocuments({'moderation.status':'pending'}),db.collection('artworks').countDocuments({'publication.status':'published'})]);return {artists,artworks,published};}

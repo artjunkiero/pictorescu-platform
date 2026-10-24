@@ -1,0 +1,1 @@
+import bcrypt from 'bcryptjs';const password=process.argv[2];if(!password||password.length<12){console.error('Furnizează o parolă de cel puțin 12 caractere: npm run hash-password -- "PAROLA"');process.exit(1)}bcrypt.hash(password,12).then(console.log);
